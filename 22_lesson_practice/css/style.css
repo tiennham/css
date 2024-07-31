@@ -35,15 +35,16 @@ div {
 }
 
 div:first-child {
-  background-color: limegreen;
+  background-color: dodgerblue;
+  transform: translateX(50%);
 }
 
 div:nth-child(2) {
-  background-color: lightblue;
+  background-color: yellow;
 }
 
 div:last-child {
-  background-color: gold;
+  background-color: limegreen;
   /* transform: translate(50%, 3rem); */
 }
 
@@ -52,6 +53,34 @@ div:hover {
   transition: all 2s ease 0.5s;
 }
 
-div:last-child:hover {
+/* div:last-child:hover {
   transform: rotate(180deg);
+} */
+
+.animate {
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(600px) rotate(180deg);
+  }
+
+  66% {
+    transform: translateX(-600px) rotate(-180deg);
+  }
+
+  100% {
+    transform: translateX(0);
+    background-color: rebeccapurple;
+  }
+
 }
